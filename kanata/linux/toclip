@@ -1,0 +1,16 @@
+× kanata.service - Kanata keyboard remapper
+     Loaded: loaded (/home/tobylaroned/.config/systemd/user/kanata.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/user/service.d
+             └─10-timeout-abort.conf
+     Active: failed (Result: exit-code) since Thu 2025-02-06 18:21:19 JST; 1min 11s ago
+   Duration: 5ms
+       Docs: https://github.com/jtroo/kanata
+    Process: 18582 ExecStart=/usr/bin/sh -c exec $$(which kanata) --cfg $${HOME}/.config/kanata/config.kbd (code=exited, status=2)
+   Main PID: 18582 (code=exited, status=2)
+        CPU: 5ms
+
+ 2月 06 18:21:19 ap-t14 systemd[2091]: Started kanata.service - Kanata keyboard remapper.
+ 2月 06 18:21:19 ap-t14 sh[18582]: /usr/bin/sh: line 1: exec: --: invalid option
+ 2月 06 18:21:19 ap-t14 sh[18582]: exec: usage: exec [-cl] [-a name] [command [argument ...]] [redirection ...]
+ 2月 06 18:21:19 ap-t14 systemd[2091]: kanata.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+ 2月 06 18:21:19 ap-t14 systemd[2091]: kanata.service: Failed with result 'exit-code'.

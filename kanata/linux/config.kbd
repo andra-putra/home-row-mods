@@ -4,7 +4,7 @@
 )
 
 (defsrc
-  d f j k 
+  d f j k bspc \ caps lctl
 )
 (defvar
   tap-time 200
@@ -19,5 +19,5 @@
 )
 
 (deflayer base
-  @d @f @j @k
+  @d @f @j @k \ bspc lctl caps
 )
