@@ -4,7 +4,7 @@
 )
 
 (defsrc
-  d f j k bspc \ caps lctl
+  d f h j k l bspc \ caps lctl lalt
 )
 (defvar
   tap-time 200
@@ -16,8 +16,15 @@
   f (tap-hold $tap-time $hold-time f lmet)
   j (tap-hold $tap-time $hold-time j rmet)
   k (tap-hold $tap-time $hold-time k ralt)
+
+  ;; Change lalt to go to utility layer when held
+  alt-util (layer-while-held utility)
 )
 
 (deflayer base
-  @d @f @j @k \ bspc lctl caps
+  @d @f h @j @k l \ bspc lctl caps @alt-util
+)
+
+(deflayer utility
+  _ _ left down up right _ _ _ _ _
 )
